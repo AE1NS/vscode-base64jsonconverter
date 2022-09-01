@@ -58,7 +58,9 @@ function convertSelectionsFromJsonToBase64(editor: TextEditor) {
         return;
       }
       try {
-        const b: Buffer = Buffer.from(encodeURIComponent(text));
+        const b: Buffer = Buffer.from(
+          encodeURIComponent(JSON.stringify(JSON.parse(text)))
+        );
         edit.replace(s, b.toString("base64"));
       } catch (e) {
         vscode.window.showInformationMessage(
