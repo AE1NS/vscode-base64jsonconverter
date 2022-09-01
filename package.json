@@ -1,0 +1,61 @@
+{
+  "name": "parameterservice",
+  "displayName": "ParameterService",
+  "description": "",
+  "version": "1.0.0",
+  "author": "AE1NS",
+  "icon": "images/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AE1NS/vscode-parameterservice.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AE1NS/vscode-parameterservice/issues"
+  },
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:parameterservice.jsonToBase64",
+    "onCommand:parameterservice.base64ToJson"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "parameterservice.jsonToBase64",
+        "title": "JSON to Base64"
+      },
+      {
+        "command": "parameterservice.base64ToJson",
+        "title": "Base64 to JSON"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "create-vsix": "vsce package"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.2.0",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.70.0",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
+    "@vscode/test-electron": "^2.1.5",
+    "eslint": "^8.20.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.0.0",
+    "typescript": "^4.7.4",
+    "vsce": "^2.11.0"
+  }
+}
