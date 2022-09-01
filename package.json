@@ -4,10 +4,10 @@
   "description": "",
   "version": "1.0.0",
   "author": "AE1NS",
-  "icon": "images/icon.png",
+  "icon": "icon.png",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AE1NS/vscode-parameterservice.git"
+    "url": "https://github.com/AE1NS/vscode-parameterservice.git"
   },
   "bugs": {
     "url": "https://github.com/AE1NS/vscode-parameterservice/issues"
