@@ -89,8 +89,11 @@ function convertSelectionsFromBase64ToJson(editor: TextEditor) {
         return;
       }
       try {
-        const b: Buffer = Buffer.from(text, "base64url");
-        edit.replace(s, JSON.parse(decodeURIComponent(b.toString())));
+        const b: Buffer = Buffer.from(decodeURIComponent(text), "base64url");
+        edit.replace(
+          s,
+          JSON.stringify(JSON.parse(decodeURIComponent(b.toString())))
+        );
       } catch (e) {
         vscode.window.showInformationMessage(
           "base64ToJson: Could not convert to JSON"
