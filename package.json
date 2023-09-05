@@ -1,17 +1,17 @@
 {
-  "name": "parameterservice",
-  "displayName": "ParameterService",
-  "description": "",
+  "name": "base64jsonconverter",
+  "displayName": "Base64 <> JSON",
+  "description": "Tools to convert Base64 to JSON and vice versa",
   "version": "1.0.3",
   "publisher": "AE1NS",
   "author": "AE1NS",
   "icon": "icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AE1NS/vscode-parameterservice.git"
+    "url": "https://github.com/AE1NS/vscode-base64jsonconverter.git"
   },
   "bugs": {
-    "url": "https://github.com/AE1NS/vscode-parameterservice/issues"
+    "url": "https://github.com/AE1NS/vscode-base64jsonconverter/issues"
   },
   "engines": {
     "vscode": "^1.70.0"
@@ -20,18 +20,18 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:parameterservice.jsonToBase64",
-    "onCommand:parameterservice.base64ToJson"
+    "onCommand:base64jsonconverter.jsonToBase64",
+    "onCommand:base64jsonconverter.base64ToJson"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "parameterservice.jsonToBase64",
+        "command": "base64jsonconverter.jsonToBase64",
         "title": "JSON to Base64"
       },
       {
-        "command": "parameterservice.base64ToJson",
+        "command": "base64jsonconverter.base64ToJson",
         "title": "Base64 to JSON"
       }
     ]

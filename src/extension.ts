@@ -4,7 +4,7 @@ import TextEditor = vscode.TextEditor;
 
 export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(
-    vscode.commands.registerCommand("parameterservice.jsonToBase64", () => {
+    vscode.commands.registerCommand("base64jsonconverter.jsonToBase64", () => {
       const editor = vscode.window.activeTextEditor;
       if (!editor) {
         return;
@@ -26,7 +26,7 @@ export function activate(context: vscode.ExtensionContext) {
   );
 
   context.subscriptions.push(
-    vscode.commands.registerCommand("parameterservice.base64ToJson", () => {
+    vscode.commands.registerCommand("base64jsonconverter.base64ToJson", () => {
       const editor = vscode.window.activeTextEditor;
       if (!editor) {
         return;
